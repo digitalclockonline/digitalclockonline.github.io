@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clock Embed Examples &amp; Setup | Digital Clock Online</title>
+  <meta name="description" content="Try Digital Clock Online in an iframe, copy working HTML examples, and choose local or named time zones. Official public examples and setup documentation.">
+  <link rel="canonical" href="https://digitalclockonline.github.io/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Clock examples · Digital Clock Online">
+  <meta property="og:description" content="A live preview, copyable iframe HTML, and practical clock setup examples.">
+  <meta property="og:url" content="https://digitalclockonline.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="assets/site.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to examples</a>
+  <header class="header"><div class="wrap header-inner">
+    <a class="brand" href="https://www.onlinedigitalclock.com/"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2456c7"/><circle cx="20" cy="20" r="12" fill="none" stroke="white" stroke-width="2"/><path d="M20 12v8l6 4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg><span>Digital Clock Online<small>EXAMPLES &amp; DOCUMENTATION</small></span></a>
+    <nav aria-label="Main navigation"><a href="#embed">Embed guide</a><a href="#timezones">Time zones</a><a href="https://github.com/digitalclockonline/digitalclockonline.github.io">GitHub ↗</a><button id="theme" class="button" type="button" aria-pressed="false" hidden>Dark page</button></nav>
+  </div></header>
+  <main class="wrap" id="main">
+    <section class="hero"><p class="eyebrow">Official public examples</p><h1>A clock for your next<br>page or project.</h1><p class="lead">Preview a hosted clock, copy the iframe HTML, and choose the time zone you need. A small collection of practical examples from <a href="https://www.onlinedigitalclock.com/">Digital Clock Online</a>.</p><div class="actions"><a class="button primary" href="#embed">Get the embed code ↓</a><a class="button" href="https://www.onlinedigitalclock.com/">Open Digital Clock Online ↗</a></div></section>
+    <section class="panel" aria-label="Live clock preview">
+      <div class="toolbar"><div class="fields"><div><label for="view">Clock view</label><select id="view"><option value="flip">Flip clock</option><option value="local">Local digital clock</option><option value="karachi">Karachi · Asia/Karachi</option><option value="london">London · Europe/London</option><option value="newYork">New York · America/New_York</option></select></div><div><label for="height">Frame height</label><select id="height"><option value="560">560 px · Standard</option><option value="720">720 px · Roomy</option><option value="420">420 px · Compact</option></select></div></div><a id="open-clock" href="https://www.onlinedigitalclock.com/flip-clock/" target="_blank" rel="noopener noreferrer">Open in a new tab ↗</a></div>
+      <div class="preview"><iframe id="clock-preview" src="https://www.onlinedigitalclock.com/flip-clock/?embed=1" title="Digital Clock Online — Flip clock" width="100%" height="560" allow="fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      <p class="caption">Hosted by <a href="https://www.onlinedigitalclock.com/">Digital Clock Online</a>. Use the controls inside the clock for display settings. If the frame is unavailable, <a href="https://www.onlinedigitalclock.com/flip-clock/">open the flip clock directly</a>.</p>
+      <noscript><p class="caption">The builder needs JavaScript. Use the default HTML below or open the standalone examples. The hosted clock also needs JavaScript.</p></noscript>
+    </section>
+    <section id="embed" class="section"><p class="eyebrow">01 / Add it to a page</p><h2>Copy, paste, and make room.</h2><p>Add this HTML to your page. The frame loads the public clock page from its own host; your page supplies the container and a visible attribution link.</p>
+      <div class="panel code-panel"><div class="code-top"><h3>Your embed HTML</h3><button id="copy-code" class="button" type="button" hidden>Copy HTML</button></div><label for="embed-code">Select this code to copy it manually</label><textarea id="embed-code" readonly spellcheck="false" aria-describedby="copy-status">&lt;iframe
+  src="https://www.onlinedigitalclock.com/flip-clock/?embed=1"
+  title="Digital Clock Online — Flip clock"
+  width="100%"
+  height="560"
+  style="border: 0; display: block; border-radius: 16px;"
+  loading="lazy"
+  allow="fullscreen"
+  referrerpolicy="strict-origin-when-cross-origin"
+&gt;&lt;/iframe&gt;
+&lt;p&gt;Clock by &lt;a href="https://www.onlinedigitalclock.com/"&gt;Digital Clock Online&lt;/a&gt;.&lt;/p&gt;</textarea><span id="copy-status" class="status" role="status" aria-live="polite"></span></div>
+      <div class="grid"><article class="card"><span class="number">1</span><h3>Start with a full example</h3><p>A complete HTML page with a responsive frame, a descriptive title, and attribution.</p><a href="examples/basic.html">Open basic example →</a></article><article class="card"><span class="number">2</span><h3>Choose a named zone</h3><p>Use a dedicated time zone page rather than hard-coding a UTC offset that may change.</p><a href="examples/timezone.html">Open time zone example →</a></article><article class="card"><span class="number">3</span><h3>Give the clock space</h3><p>Start at 560 px tall. Test at your actual container width; compact frames can require scrolling.</p><a href="#questions">Read integration notes →</a></article></div>
+      <p class="note">The flip clock uses its embed URL with ?embed=1. Local digital and named time zone examples frame their existing public pages, including page content and controls.</p>
+    </section>
+    <section id="timezones" class="section"><p class="eyebrow">02 / Use the right zone</p><h2>Names travel better than offsets.</h2><p>Named IANA zones identify the place and its time rules. Where daylight saving applies, the displayed offset depends on the date. The examples use public time zone pages.</p><div class="table-scroll"><table><thead><tr><th scope="col">Place</th><th scope="col">IANA zone</th><th scope="col">Hosted clock</th></tr></thead><tbody><tr><td>Karachi</td><td><code>Asia/Karachi</code></td><td><a href="https://www.onlinedigitalclock.com/timezone/asia-karachi/">Open Karachi clock ↗</a></td></tr><tr><td>London</td><td><code>Europe/London</code></td><td><a href="https://www.onlinedigitalclock.com/timezone/europe-london/">Open London clock ↗</a></td></tr><tr><td>New York</td><td><code>America/New_York</code></td><td><a href="https://www.onlinedigitalclock.com/timezone/america-new-york/">Open New York clock ↗</a></td></tr></tbody></table></div><p><a href="https://www.onlinedigitalclock.com/timezones/">Browse all time zones →</a></p></section>
+    <section id="questions" class="section"><p class="eyebrow">03 / Integration notes</p><h2>A few things to know.</h2><details open><summary>How accurate is the hosted clock?</summary><p>The main website explains its server-time comparison and network uncertainty. Read <a href="https://www.onlinedigitalclock.com/clock-accuracy/">Is your clock right?</a> for how it works and what the measurement can tell you.</p></details><details><summary>Can I style or control the clock from my page?</summary><p>You can style the iframe container and set its height. The content belongs to another origin, so your page cannot reach into its DOM or control its settings. Use the controls inside the hosted page. The theme button here changes this documentation page only.</p></details><details><summary>What if my site blocks the iframe?</summary><p>If your site has a Content Security Policy, its frame-src directive must allow https://www.onlinedigitalclock.com. A browser extension, network filter, or future host policy may also prevent embedding. Keep a direct clock link beside the frame. An iframe load event alone does not prove the clock rendered successfully.</p></details><details><summary>Does the embed work offline or collect information?</summary><p>The frame needs internet access and runs the hosted website, whose <a href="https://www.onlinedigitalclock.com/privacy/">privacy policy</a> applies. This examples page adds no analytics or account sign-in. Framed pages may have their own cookies, analytics, and advertising.</p></details><details><summary>Where can I install the Chrome extension?</summary><p>Use the published <a href="https://chromewebstore.google.com/detail/lcaglchajnkhhfpkfejkbilndlkppbjb">Digital Clock Online Chrome Store listing</a>. See <a href="https://www.onlinedigitalclock.com/extension/">extension details</a> for features and privacy. This repository does not distribute an extension.</p></details><details><summary>What source code is public?</summary><p>This repository contains only newly written documentation, iframe examples, and this static page. The production website and browser extension source remain private. The example files are available under the repository’s MIT license.</p></details></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><p>Examples by <a href="https://www.onlinedigitalclock.com/">Digital Clock Online</a>.</p><div class="footer-links"><a href="https://github.com/digitalclockonline/digitalclockonline.github.io">Source &amp; documentation</a><a href="https://www.onlinedigitalclock.com/contact/">Contact</a><a href="https://www.onlinedigitalclock.com/privacy/">Hosted clock privacy</a></div></div></footer>
+</body>
+</html>

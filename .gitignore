@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+.next/
+*.map
+*.zip
+__pycache__/
+.DS_Store
+Thumbs.db
